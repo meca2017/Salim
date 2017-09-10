@@ -15,6 +15,11 @@ header{
 	background-color: #405d27;
 }
 
+header h1{
+	height: 100%;
+	width: 100%;
+}
+
 header img{
 	display: block;
 	margin-left: auto;

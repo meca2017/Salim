@@ -10,25 +10,23 @@
 <body>
 	
 	<header style="width:100%;">
-		<h1><img src="img/logo.png" alt="Salim" title="Salim"></h1>
+		<h1>
+			<img src="img/logo.png" alt="Salim" title="Salim">
+		</h1>
 	</header>
 	
 	<nav>
-		
 		<ul>
 			<li><a href="">home</a></li>
 			<li><a href="maps.php">maps</a></li>
 			<li><a href="boats.php">boats</a></li>
 			<li><a href="contacts.php">contacts</a></li>
 			<li><a href="about.php">about</a></li>			
-		</ul>		
-	
+		</ul>	
 	</nav>
 	
 	<section>
-
 		<div id="news" style="width:20%;height:100%;float:left;overflow-y:scroll;">
-
 			<header><h2>NEWS</h2></header>
 
 			<?php
@@ -40,7 +38,7 @@
 				    exit;
 				}
 
-				$sql    = 'SELECT nome FROM tb_login';
+				$sql    = 'SELECT noticia,data,hora,barco FROM salim_news';
 				$result = mysql_query($sql, $link);
 
 				if (!$result) {
@@ -50,17 +48,20 @@
 				}
 
 				while ($row = mysql_fetch_assoc($result)) {				    
-				    echo"<a href='' style='position:relative;'>";
+				    echo"<a href=''>";
 					echo"	<article>";
 					echo"		<img src='img/logo.png'>";
 					echo"		<p>";
-					echo 			$row['nome'];
+					echo 			$row['hora'];
+					echo "</br>";
+					echo 			$row['noticia'];
+					echo "</br>";
+					echo 			$row['barco'];
 					echo"		</p>";
 					echo"	</article>";					
 					echo"</a>";
 				}					
 			?>			
-
 		</div>
 		
 		<div id="googleMap" style="width:80%;height:100%;float:right;"></div>
@@ -73,14 +74,11 @@
 			}
 		</script>
 
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkWUwfgXgmBCnOEnhp0sJHkl3vgoLP68U&callback=myMap"></script>		
-	
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkWUwfgXgmBCnOEnhp0sJHkl3vgoLP68U&callback=myMap"></script>	
 	</section>
 	
 	<footer>
-
-		<img src="img/logo_fmm.png">
-	
+		<img src="img/logo_fmm.png">	
 	</footer>
 
 </body>

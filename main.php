@@ -4,12 +4,23 @@
 <head>
 	<title>Salim - Sistema Automatizado Da Limpeza Dos Igarapés De Manaus</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="layout.css">
+	<link rel="stylesheet" type="text/css" href="layout_main.css">
 </head>
 
 <body>
 	
 	<header style="width:100%;">
+		<?php 
+			session_start();
+			if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
+			{
+				unset($_SESSION['login']);
+				unset($_SESSION['senha']);
+				header('location:index.php');
+				}
+
+			$logado = $_SESSION['login'];
+		?>
 		<h1>
 			<img src="img/logo.png" alt="Salim" title="Salim">
 		</h1>

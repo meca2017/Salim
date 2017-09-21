@@ -14,7 +14,7 @@
 
 	<section>
 		<div>
-			<form autocomplete="on" method="post" action="login.php">
+			<form autocomplete="on" method="post" action="Cadastro.php">
 				<strong>CADASTRO</strong>
 				<input type="text" name="nome" placeholder="NOME" required="true">
 				</br>

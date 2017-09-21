@@ -21,6 +21,7 @@
 				<input type="password" name="senha" placeholder="PASSWORD" required="true">
 				</br>
 				<input type="submit" name="login" value="ENTRAR">
+				<a href="cadastrar.php">cadastrar</a>
 			</form>
 		</div>
 	</section>

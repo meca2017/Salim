@@ -67,7 +67,7 @@
 					echo "</br>";
 					echo 			$row['noticia'];
 					echo "</br>";
-					echo 			$row['barco'];
+					echo 			$row['barco'];			
 					echo"		</p>";
 					echo"	</article>";					
 					echo"</a>";
@@ -80,7 +80,7 @@
 		<script>
 			function myMap() 
 			{
-				var mapProp= {center:new google.maps.LatLng(-3.0404977,-59.9465168,13), zoom:5,};
+				var mapProp= {center:new google.maps.LatLng(-3.0404977,-59.9465168,13), zoom:11};
 				var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 			}
 		</script>

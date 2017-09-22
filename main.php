@@ -29,7 +29,7 @@
 	<nav>
 		<ul>
 			<li><a href="">home</a></li>
-			<li><a href="maps.php">maps</a></li>
+			<li><a href="maps.php?mapa=manaus">maps</a></li>
 			<li><a href="boats.php">boats</a></li>
 			<li><a href="contacts.php">contacts</a></li>
 			<li><a href="about.php">about</a></li>			
@@ -59,7 +59,7 @@
 				}
 
 				while ($row = mysql_fetch_assoc($result)) {				    
-				    echo"<a href=''>";
+				    
 					echo"	<article>";
 					echo"		<img src='img/logo.png'>";
 					echo"		<p>";
@@ -69,8 +69,7 @@
 					echo "</br>";
 					echo 			$row['barco'];			
 					echo"		</p>";
-					echo"	</article>";					
-					echo"</a>";
+					echo"	</article>";
 				}					
 			?>			
 		</div>
@@ -89,7 +88,15 @@
 	</section>
 	
 	<footer>
-		<img src="img/logo_fmm.png">	
+		<img src="img/logo_fmm.png" style="float: left;">
+		<div style="width:200px; height: 100%; float: right;">
+			<img src="img/user.png" style="width: 80px; height: 80px; float: left;">
+			<?php 
+				echo"<p style='float:right;'>";
+				echo $_SESSION['login'];
+				echo "</p>";
+			 ?>			
+		</div>	
 	</footer>
 
 </body>

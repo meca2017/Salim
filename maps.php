@@ -13,6 +13,8 @@
 			if($local == "manaus"){
 				$x = -3.0590109;
 				$y = -59.981879;
+				$x_marcador = -3.0590109;
+				$y_marcador = -59.981879;
 				$zoom = 11;
 				$macadores ='';
 			}
@@ -25,7 +27,7 @@
 				    exit;
 				}
 
-				$sql    = 'SELECT x,y,zoom,script FROM tb_boats WHERE id = ' . $local;
+				$sql    = 'SELECT x,y,x_marcador,y_marcador,zoom,script FROM tb_mapas WHERE id = ' . $local;
 				$result = mysql_query($sql, $link);
 
 				if (!$result) {
@@ -37,8 +39,11 @@
 				while ($row = mysql_fetch_assoc($result)) {	 
 					$x =  floatval($row['x']);
 					$y =  floatval($row['y']);
+					$x_marcador = floatval($row['x_marcador']);
+					$y_marcador = floatval($row['y_marcador']);
 					$zoom =  floatval($row['zoom']);
 					$macadores = $row['script'];
+					$script = $row['script'];
 				}
 			}
 		?>
@@ -65,7 +70,7 @@
 				    exit;
 				}
 
-				$sql    = 'SELECT nome,id FROM tb_boats';
+				$sql    = 'SELECT nome,id FROM tb_mapas';
 				$result = mysql_query($sql, $link);
 
 				if (!$result) {
@@ -92,20 +97,29 @@
 		<script>
 			function myMap() 
 			{
-				var myLatLng={lat: <?php echo $x; ?>, lng: <?php echo $y; ?>};
-				var mapProp= {center:new google.maps.LatLng(<?php echo $x; ?>,<?php echo $y; ?>), zoom:<?php echo $zoom; ?>};
-				var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+				var myLatlng = new google.maps.LatLng(<?php echo $x;?>,<?php echo $y;?>);
+				var myLatlngm = new google.maps.LatLng(<?php echo $x_marcador;?>,<?php echo $y_marcador;?>);
+				var mapOptions = {
+  				zoom: <?php echo $zoom;?>,
+  				center: myLatlng
+				}
+				var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
 
 				var marker = new google.maps.Marker({
-	          		position: myLatLng,
-	          		googleMap: map,
-	          		title: 'Hello World!'
-	        	});
+				    position: myLatlngm,
+				    title:"Hello World!"
+				});
+
+				// To add the marker to the map, call setMap();
+				marker.setMap(map);
+
+				map.data.loadGeoJson(map.geojson);      
 			}
 
 		</script>
 
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkWUwfgXgmBCnOEnhp0sJHkl3vgoLP68U&callback=myMap"></script>	
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkWUwfgXgmBCnOEnhp0sJHkl3vgoLP68U&callback=myMap"></script>
+	
 	</section>
 	</section>
 	<footer>

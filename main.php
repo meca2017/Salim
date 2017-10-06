@@ -4,12 +4,12 @@
 <head>
 	<title>Salim - Sistema Automatizado Da Limpeza Dos Igarapés De Manaus</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="layout_main.css">
+	<link rel="stylesheet" type="text/css" href="css/layout_main.css">
 </head>
 
 <body>
 	
-	<header style="width:100%;">
+	<header>
 		<?php 
 			session_start();
 			if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true))
@@ -21,6 +21,14 @@
 
 			$logado = $_SESSION['login'];
 		?>
+		<div id="usuario">
+			<img src="img/user.png">
+			<?php 
+				echo"<p>";
+				echo $_SESSION['login'];
+				echo "</p>";
+			 ?>			
+		</div>
 		<h1>
 			<img src="img/logo.png" alt="Salim" title="Salim">
 		</h1>
@@ -28,7 +36,6 @@
 	
 	<nav>
 		<ul>
-			<li><a href="">home</a></li>
 			<li><a href="maps.php?mapa=manaus">maps</a></li>
 			<li><a href="boats.php">boats</a></li>
 			<li><a href="contacts.php">contacts</a></li>
@@ -37,7 +44,7 @@
 	</nav>
 	
 	<section>
-		<div id="news" style="width:20%;height:100%;float:left;overflow-y:scroll;">
+		<div id="news">
 			<header><h2>NEWS</h2></header>
 
 			<?php
@@ -88,15 +95,7 @@
 	</section>
 	
 	<footer>
-		<img src="img/logo_fmm.png" style="float: left;">
-		<div style="width:200px; height: 100%; float: right;">
-			<img src="img/user.png" style="width: 80px; height: 80px; float: left;">
-			<?php 
-				echo"<p style='float:right;'>";
-				echo $_SESSION['login'];
-				echo "</p>";
-			 ?>			
-		</div>	
+		<img src="img/logo_fmm.png">			
 	</footer>
 
 </body>

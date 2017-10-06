@@ -27,7 +27,8 @@
 				echo"<p>";
 				echo $_SESSION['login'];
 				echo "</p>";
-			 ?>			
+			 ?>			 
+			<span class="entypo-down-dir"></span>		
 		</div>
 		<h1>
 			<img src="img/logo.png" alt="Salim" title="Salim">

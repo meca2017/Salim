@@ -22,17 +22,16 @@
 			$logado = $_SESSION['login'];
 		?>
 		<div id="usuario">
-			<img src="img/user.png">
-			<?php 
-				echo"<p>";
-				echo $_SESSION['login'];
-				echo "</p>";
-			 ?>			 
-			<span class="entypo-down-dir"></span>		
+			<img src="img/logo_name.png">
+			<span class="user"><span class="fontawesome-caret-down"></span></span>
+			<p class="user"><?php echo $_SESSION['login']?></p>
+			<hr size="48" width="3" align="left" class="user">
+			<img class="user" src="img/user.png">
 		</div>
-		<h1>
-			<img src="img/logo.png" alt="Salim" title="Salim">
-		</h1>
+
+		<div id="logo">
+			<img src="img/logo.png">
+		</div>
 	</header>
 	
 	<nav>
@@ -94,10 +93,6 @@
 
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkWUwfgXgmBCnOEnhp0sJHkl3vgoLP68U&callback=myMap"></script>	
 	</section>
-	
-	<footer>
-		<img src="img/logo_fmm.png">			
-	</footer>
 
 </body>
 

@@ -23,76 +23,86 @@
 }
 
 body {
-  background: #2c3338;
-  color: #606468;
+  background: #392d39;
   font: 87.5%/1.5em 'Open Sans', sans-serif;
   margin: 0;
 }
 
 header{
-  width: 100%;
-  height: 400px;
+  width: 30%;
+  height: 100px;
+  float: left;
+  background: -moz-radial-gradient(#473847 40%,#392d39 50%);
 }
 
-#usuario {
-  background: #b8c1c7;
-  height: 15%;
-  width: 100%;
+header img{
+	width: 100%;
+	max-width: 100px;
+	height: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-#usuario img{
-  height: 52px;
-  margin: 4px;  
+#user{
+	width: 70%;
+	height: 50px;
+	float: right;
 }
 
-#usuario .user{
-  float: right; 
-  margin-left: 5px; 
+#user img{
+	margin-top: 5px;
+	max-width: 40px;
+	height: 40px;
+	float: right;
+	margin-right: 5px;
 }
 
-#usuario p.user{
-  margin-top: 19.5px;
-
+#user a{
+	color: #0099cc;
 }
 
-#usuario span.user{ 
-  margin-top: 20.5px;
+#user p{
+	float: right;
+	margin-top: 14.5px;
+	margin-right: 5px;
 }
 
-#logo {
-  height: 85%;
-  width: 100%;
-  background: #d4dadd;
+#user span{
+	float: right;
+	margin-top: 14.5px;
+	margin-right: 25px;
 }
 
-#logo img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-}
-
-nav {
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 50px;
-  margin-top: 10px;
-  background: #b8c1c7;
+nav{
+	width: 70%;
+	height: 50px;
+	float: right;
 }
 
 ul{
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
+
 }
 
 li{
-  width: 25%;
-  height: 100%;
-  float: left;
-  text-align: center;
+	margin-right: 0.75%;
+	width: 24.25%;
+	height: 100%;
+	float: left;
+	background: #ffffff;
+	border-radius: 10px;	
+  	color: #004d00;
+  	text-align: center;
+  	vertical-align: bottom;
 }
 
-li a {
-  te
+li p{
+	margin-top: 14.5px;
+	font-family: 'Josefin Sans', sans-serif;
+  	text-decoration: none;
+  	font-size: xx-large;
 }
+
+

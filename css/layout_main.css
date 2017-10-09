@@ -26,13 +26,13 @@ body {
   background: #392d39;
   font: 87.5%/1.5em 'Open Sans', sans-serif;
   margin: 0;
+  margin-top: 10px;
 }
 
 header{
   width: 30%;
   height: 100px;
   float: left;
-  background: -moz-radial-gradient(#473847 40%,#392d39 50%);
 }
 
 header img{
@@ -78,6 +78,7 @@ nav{
 	width: 70%;
 	height: 50px;
 	float: right;
+	margin-bottom: 25px;
 }
 
 ul{
@@ -103,6 +104,13 @@ li p{
 	font-family: 'Josefin Sans', sans-serif;
   	text-decoration: none;
   	font-size: xx-large;
+}
+
+#map {
+	width: 80%;
+	height:440px;
+	margin-left: auto;
+	margin-right: auto;	
 }
 
 

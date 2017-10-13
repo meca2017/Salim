@@ -29,8 +29,14 @@ body {
   margin-top: 10px;
 }
 
+#testao{
+	width: 100%;
+	height: 100px;
+	margin-bottom: 25px;
+}
+
 header{
-  width: 30%;
+  width: 80%;
   height: 100px;
   float: left;
 }
@@ -45,7 +51,7 @@ header img{
 }
 
 #user{
-	width: 70%;
+	width: 20%;
 	height: 50px;
 	float: right;
 }
@@ -75,28 +81,29 @@ header img{
 }
 
 nav{
-	width: 70%;
+	width: 90%;
 	height: 50px;
-	float: right;
 	margin-bottom: 25px;
+	margin-left:auto;
+	margin-right: auto;
 }
 
 ul{
 	width: 100%;
 	height: 100%;
+	margin-bottom: 25px;
 
 }
 
 li{
-	margin-right: 0.75%;
-	width: 24.25%;
+	width: 24.7%;
 	height: 100%;
-	float: left;
 	background: #ffffff;
 	border-radius: 10px;	
   	color: #004d00;
   	text-align: center;
   	vertical-align: bottom;
+  	display: inline-block;
 }
 
 li p{
@@ -106,11 +113,39 @@ li p{
   	font-size: xx-large;
 }
 
+
 #map {
-	width: 80%;
-	height:440px;
+	margin-top:25px;
+	width: 90%;
+	height:520px;
 	margin-left: auto;
 	margin-right: auto;	
+}
+
+#novidades{
+	width: 100%;
+	height: 350px;
+	display: block;
+	background: #ffffff;
+	margin-top: 50px;
+}
+
+#novidades h2{
+	display: block;
+	margin-left: auto;
+	margin-right:auto;
+	text-align: center;
+}
+
+#novidades article{
+	width: 24.7%;
+	height: 290px;
+	display: inline-block;
+}
+
+#novidades article img{
+	width: 100%;
+	height: 100%;
 }
 
 
